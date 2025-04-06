@@ -1,0 +1,97 @@
+h1, h2, h3, h4 {
+    color: #5B8C5A;
+    text-align: center;
+}
+
+h2 {
+    padding-top: 0px !important;
+    margin: 0px 0px 20px 0px;
+}
+
+body {
+    background-color: #2E2532;
+    text-align: center;
+}
+
+code {
+    text-shadow: none !important;
+}
+
+pre {
+    border-radius: 10px;
+    background-color: #2E2532 !important; 
+}
+
+
+/* Style for the copy button */
+.copy-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 3px 3px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+  }
+  
+@keyframes shake {
+    0% {
+    transform: translateX(0);
+    }
+    25% {
+    transform: translateX(-2px);
+    }
+    50% {
+    transform: translateX(2px);
+    }
+    75% {
+    transform: translateX(-2px);
+    }
+    100% {
+    transform: translateX(0);
+    }
+}
+  
+  /* Apply the shake effect on click */
+  .copy-icon:active {
+
+    animation: shake 0.3s ease; /* 0.3 seconds for the shake effect */
+  }
+
+.copy-icon {
+    max-width: 20px;
+    max-height: 20px;
+}
+  
+
+p {
+    color: #FEFFFE;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    max-width: 700px;
+    text-align: left;
+    margin: 0 auto;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+#mainDiv {
+    background-color: #4C3D52;
+    max-width: fit-content;
+    padding: 30px 45px;
+    margin: auto;
+    min-height: fit-content;
+    border-radius: 10px;
+    
+}
+
+.first-word {
+    color: #5B8C5A;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.tab {
+    padding-left: 2rem;
+}
+
