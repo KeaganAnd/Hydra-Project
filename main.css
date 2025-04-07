@@ -1,13 +1,27 @@
-h1, h2, h3, h4 {
+h1, h2, h3, h4, h5 {
     color: #5B8C5A;
-    text-align: center;
+
 }
 
 h2 {
     padding-top: 0px !important;
     margin: 0px 0px 20px 0px;
+    text-align: center;
 }
 
+.bottomNavBar {
+    justify-content: center;
+    display: flex;
+}
+.separator {
+    margin: 0 10px; /* Adds space on both sides of the pipe */
+    font-size: 20px; /* Optional: Increase font size of the pipe */
+    display: flex;
+  }
+
+a {
+    color: #EFDF6B;
+}
 body {
     background-color: #2E2532;
     text-align: center;
@@ -63,12 +77,15 @@ pre {
     max-width: 20px;
     max-height: 20px;
 }
-  
+pre, code {
+    white-space: pre; /* Preserve whitespace and blank lines */
+}
 
 p {
     color: #FEFFFE;
     font-family: Georgia, 'Times New Roman', Times, serif;
     max-width: 700px;
+    min-width: 700px;
     text-align: left;
     margin: 0 auto;
     font-size: 18px;

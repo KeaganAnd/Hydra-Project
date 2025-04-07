@@ -1,5 +1,5 @@
 const params = new URLSearchParams(window.location.search);
-let article = params.get('article') || 'intro'; // default to 'intro'
+let article = params.get('section') || 'intro'; // default to 'intro'
 article = `${article}.md`; // append .md if not present
 
 fetch(`articles/${article}`)

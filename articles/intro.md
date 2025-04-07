@@ -1,6 +1,6 @@
 ## Intro
 
-<span class="first-word tab">Welcome!</span> This program is designed for beginners so there will be simplification. If you've done very little or no coding at all you're in the right place!
+**Welcome!** This is a program to learn Roblox Scripting. This site is not at all affiliated with Roblox. This program is designed for beginners so there will be simplification. If you've done very little or no coding at all you're in the right place!
 
 #### About Me
 
@@ -9,6 +9,22 @@
 #### Things to know
 This program will not require any prior programming experience! However some basic understanding of being able to download programs and navigate the web are required.
 
-<span><pre class="line-numbers"><code class="language-lua">-- This is a comment!
-print("Hello, World")
+#### Code Blocks
+Code blocks will be all over the things you read. They provide code examples. You can click the icon on the top right to copy the code for your use.  
+
+
+<span><br><pre class="line-numbers"><code class="language-lua">-- This is a code block!
+print("Let's, Learn")
 </code></pre></span>
+
+#### Links
+
+You'll probably see a lot of links that look like [this](#Links), they'll provide you relevant info about things. So click away!
+
+#### Videos
+
+Videos will talk about the sections in a shorter format with my commentary. Be sure to still read because the video may not cover everything in depth. Eventually I want each section to have its own video. So if you don't see one yet, it's on its way!
+
+You're at the end! You can navigate sections below!
+
+<span class="bottomNavBar"><a href="#">Home</a> <span class="separator">|</span> <a href="?section=variables">Section 1: Variables</a>  </span>
