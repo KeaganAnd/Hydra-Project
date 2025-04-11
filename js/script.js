@@ -11,9 +11,10 @@ fetch(`articles/${article}`)
     const html = marked.parse(md);
     document.getElementById('content').innerHTML = html;
 
+    wrapCodeBlocks()
     // Apply syntax highlighting after the content is added
     Prism.highlightAll();
-
+    wrapTextElements()
     // Dynamically add the copy button to each code block
     document.querySelectorAll('pre').forEach((block) => {
       // Ensure the block has a <code> child element
