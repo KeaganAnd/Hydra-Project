@@ -109,6 +109,7 @@ p {
     margin: auto;
     min-height: fit-content;
     border-radius: 10px;
+    float: left;
     
 }
 
@@ -122,3 +123,15 @@ p {
     padding-left: 2rem;
 }
 
+#container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.sideBox {
+    text-align: center;
+    min-height: fit-content;
+    max-width: fit-content;
+}
