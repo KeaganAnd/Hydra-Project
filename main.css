@@ -1,9 +1,15 @@
+:root {
+    --headerGreen: #5B8C5A;
+    --linkColor: #EFDF6B;
+    --bodyColor: #2E2532;
+    --paragraphColor: #FEFFFE;
+    --contentBackgroundColor: #4C3D52;
+  }
+
 h1, h2, h3, h4, h5 {
-    color: #5B8C5A;
+    color: var(--headerGreen);
 
 }
-
-
 
 h2 {
     padding-top: 0px !important;
@@ -22,12 +28,13 @@ h2 {
   }
 
 a {
-    color: #EFDF6B;
+    color: var(--linkColor);
 }
 body {
-    background-color: #2E2532;
+    background-color: var(--bodyColor);
     text-align: center;
 }
+
 
 code {
     text-shadow: none !important;
@@ -41,16 +48,20 @@ code {
 .operator {
     background-color: transparent !important;
 }
+
 pre {
     border-radius: 10px;
-    background-color: #2E2532 !important; 
+    background-color: var(--bodyColor) !important;
+    margin-top: 25px !important;
+    margin-bottom: 25px !important;
 }
 
 
 /* Style for the copy button */
 .copy-btn {
-    position: absolute;
-    top: 10px;
+    position: sticky;
+    float: right;
+    top: 0px;
     right: 10px;
     padding: 3px 3px;
     background-color: transparent;
@@ -92,8 +103,8 @@ pre, code {
 }
 
 p {
-    color: #FEFFFE;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: var(--paragraphColor);
+    font-family: Georgia, 'Times New Roman', Times, san-serif;
     max-width: 700px;
     min-width: 700px;
     text-align: left;
@@ -103,8 +114,8 @@ p {
 }
 
 #mainDiv {
-    background-color: #4C3D52;
-    max-width: fit-content;
+    background-color: var(--contentBackgroundColor);
+    max-width:max-content;
     padding: 30px 45px;
     margin: auto;
     min-height: fit-content;
@@ -113,12 +124,51 @@ p {
 }
 
 .first-word {
-    color: #5B8C5A;
+    color: var(--headerGreen);
     font-weight: bold;
     font-size: 20px;
 }
 
 .tab {
     padding-left: 2rem;
+}
+
+.accordion {
+    width: 100%;
+    display: block;
+    margin: auto;
+    background-color: var(--headerGreen);
+    border: none;
+    border-radius: 10px;
+    height: 4em;
+    color: var(--paragraphColor);
+    font-size: 100%;
+    padding: 5px;
+    cursor: pointer;
+
+    
+    
+}
+
+.accordion-down-arrow {
+    height: 1.25em;
+    position: absolute;
+    left: 90%;
+    bottom: 50%;
+    transform: translate(50%, 50%);
+    
+    
+}
+
+.accordion-container
+{
+    position: relative;
+}
+
+.panel {
+    display: none;
+    background-color: var(--headerGreen);
+    border-radius: 0px 0px 10px 10px;
+    padding: 10px;
 }
 

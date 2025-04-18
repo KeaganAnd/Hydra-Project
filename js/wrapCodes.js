@@ -5,8 +5,7 @@ function wrapCodeBlocks() {
     if (codeBlock.parentElement.tagName.toLowerCase() !== 'pre') {
       // Create a <pre> element
       const pre = document.createElement('pre');
-      pre.className = "line-numbers";
-      console.log(pre.className);
+      pre.className = "line-numbers language-lua";
       // Move the <code> block inside the <pre> block
       codeBlock.parentElement.replaceChild(pre, codeBlock);
       pre.appendChild(codeBlock);
@@ -24,7 +23,6 @@ function wrapTextElements() {
   codeBlock.childNodes.forEach((node) => {
     // Check if the node is a text node and not empty
     if (node.nodeType === Node.TEXT_NODE && node.textContent.trim() !== "") {
-      console.log("Text node found:", node.textContent);
 
       // Wrap the text node in a <span>
       const span = document.createElement('span');
@@ -34,4 +32,33 @@ function wrapTextElements() {
     }
   });
   })
+}
+
+function makeAccordions() {
+  var acc = document.getElementsByClassName("accordion");
+  var i;
+
+  for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+      /* Toggle between adding and removing the "active" class,
+      to highlight the button that controls the panel */
+      this.classList.toggle("active");
+
+      /* Toggle between hiding and showing the active panel */
+
+      let sibling = this.parentElement.nextElementSibling;
+
+      let img = this.parentElement.getElementsByClassName("accordion-down-arrow")[0]
+
+      if (sibling.style.display === "block") {
+        sibling.style.display = "none";
+        this.style.borderRadius = "10px"
+        img.style.transform = 'translate(50%, 50%) rotate(0deg)'
+      } else {
+        sibling.style.display = "block";
+        this.style.borderRadius = "10px 10px 0px 0px"
+        img.style.transform = 'translate(50%, 50%) rotate(180deg)'
+      }
+    });
+  } 
 }
