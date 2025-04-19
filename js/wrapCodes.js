@@ -1,16 +1,27 @@
 function wrapCodeBlocks() {
   // After rendering the Markdown content
   document.querySelectorAll('code').forEach((codeBlock) => {
+    const div = document.createElement('div')
+    div.className = "code-block-wrapper"
+    
     // Check if the parent is already a <pre> tag
     if (codeBlock.parentElement.tagName.toLowerCase() !== 'pre') {
       // Create a <pre> element
       const pre = document.createElement('pre');
       pre.className = "line-numbers language-lua";
       // Move the <code> block inside the <pre> block
+      
       codeBlock.parentElement.replaceChild(pre, codeBlock);
+      
       pre.appendChild(codeBlock);
+
+      pre.parentElement.replaceChild(div, pre)
+      div.appendChild(pre)
+
     } else {
       codeBlock.parentElement.classList.add("line-numbers");
+      codeBlock.parentElement.parentElement.replaceChild(div, codeBlock.parentElement)
+      div.appendChild(codeBlock.parentElement)
     }
 
     

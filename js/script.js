@@ -19,7 +19,7 @@ fetch(`articles/${article}`)
 
     
     // Dynamically add the copy button to each code block
-    document.querySelectorAll('pre').forEach((block) => {
+    Array.from(document.getElementsByClassName('code-block-wrapper')).forEach((block) => {
       // Ensure the block has a <code> child element
       const code = block.querySelector('code');
       if (!code) return;
@@ -37,6 +37,8 @@ fetch(`articles/${article}`)
       // Position the copy button at the top-right of the code block
       block.style.position = 'relative'; // Ensure that the button can be positioned inside the block
       copyBtn.style.right = '10px'
+      copyBtn.style.top = '10px'
+      copyBtn.style.position = 'absolute'
       block.insertBefore(copyBtn, block.firstChild);
 
       // Add event listener for the copy button
