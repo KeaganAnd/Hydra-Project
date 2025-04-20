@@ -184,7 +184,7 @@ What? Somehow our integer variable became a string variable. Cool huh? Not reall
 
 ##### Static Variables
 
-Some variables you may never want to change the value, this is called a static variable. Using these saves a bit of [memory](https://en.wikipedia.org/wiki/Computer_memory) on your computer. We won't get much into the parts of a computer(hardware), simply memory is a place where your computer stores data. Like these variables we're making. However this memory is limited and gets deleted when the computer loses power, so a good programmer will aim to use as little as possible.
+Some variables you may never want to change the value, this is called a static variable. Using these saves a bit of <a href="https://en.wikipedia.org/wiki/Computer_memory" target="_blank">memory</a> on your computer. We won't get much into the parts of a computer(hardware), simply memory is a place where your computer stores data. Like these variables we're making. However this memory is limited and gets deleted when the computer loses power, so a good programmer will aim to use as little as possible.
 
 <span><br></span>
 
@@ -195,17 +195,19 @@ local PI_VALUE = 3.14159
 ```
 ### Excercises
 
+**Excercises are designed to review all the stuff you learned in this section! I recomend trying them all.**
+
 #### Excercise 1 | Jimmy The Giraffe
 
 Great! You made it to the end. Now let's test some of the stuff you learned.
 
 <span><br></span>
 
-I have a pet giraffe named Jimmy. He's 13 years old and weighs 1305.56 pounds. He's healthy, and he doesn’t have a brother — there’s no brother to speak of, so nothing should go there.
+I have a pet giraffe named **Jimmy**. He's **13** years old and weighs **1305.56** pounds. He's **healthy**, and he **doesn’t** have a brother — there’s no brother to speak of, so nothing should go there.
 
 Use the correct variable type for each value. You should store his name, age, weight, whether hes healthy or not, and his brother.
 
-
+<span><br></span>
 
 <span>
 <div class="accordion-container">
@@ -224,6 +226,53 @@ local healthy = true    -- His health is stored as a boolean
 local brother = nil     -- Since his brother doesn't exist we can store it as nil
 ```
 </div>
+
 </span>
 
-<span class="bottomNavBar"><a href="?section=intro">Section 0: Intro</a> <span class="separator">|</span> <a href="?section=test">Section 2: UNKNWON</a>  </span>
+<span><br></span>
+
+#### Excercise 2 | Grocery Store
+
+You're gonna be tracking grocery store transactions!
+
+Make a variable called "store balance", remember how to format variables! You need to track the store current dollar balance.
+
+<span><br></span>
+
+1. The store starts the day with a balance of **$100**
+2. Someone makes a purchase of **$34.12**
+3. Another person makes a purchase **$13.01**
+4. The final person makes a purchase of **$130.32**
+5. The store buys some more apples and spends **$35.45**
+
+<span><br></span>
+
+<span>
+<div class="accordion-container">
+<img class="accordion-down-arrow" src="imgs/arrow-down.png">
+<button class="accordion">Exercise 2 Answer</button>
+</div>
+
+<div class="panel">
+    Keep in mind variable names and order do not be the same as well as not needing any of the comments. However the values do.
+
+```lua
+local storeBalance = 100             -- We create the variable with the starting balance of $100
+
+storeBalance = storeBalance + 34.12  -- Since the store sells $34.12 of product we add it to their balance
+
+storeBalance = storeBalance + 13.01  -- Since the store sells $13.01 of product we add it to their balance 
+
+storeBalance = storeBalance + 130.32 -- Since the store sells $130.32 of product we add it to their balance 
+
+storeBalance = storeBalance - 35.45  -- Since the store bought $35.45 of product we subtract it from their balance
+
+print("Balance: " .. storeBalance)
+
+```
+
+When you run the script it should print:
+**Balance: 242.0**
+</div>
+
+</span>

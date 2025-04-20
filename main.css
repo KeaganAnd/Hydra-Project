@@ -4,10 +4,13 @@
     --bodyColor: #2E2532;
     --paragraphColor: #FEFFFE;
     --contentBackgroundColor: #4C3D52;
+    --accordionColor: #A28497;
+    --navBarColors: #AA8FA0;
   }
 
 h1, h2, h3, h4, h5 {
     color: var(--headerGreen);
+    margin-bottom: 10px;
 
 }
 
@@ -17,22 +20,14 @@ h2 {
     text-align: center;
 }
 
-.bottomNavBar {
-    justify-content: center;
-    display: flex;
-}
-.separator {
-    margin: 0 10px; /* Adds space on both sides of the pipe */
-    font-size: 20px; /* Optional: Increase font size of the pipe */
-    display: flex;
-  }
-
 a {
     color: var(--linkColor);
 }
 body {
     background-color: var(--bodyColor);
     text-align: center;
+    padding: 0;
+    margin: 0;
 }
 
 
@@ -52,8 +47,9 @@ code {
 pre {
     border-radius: 10px;
     background-color: var(--bodyColor) !important;
-    margin-top: 25px !important;
+    padding-top: 2.2em;
     margin-bottom: 25px !important;
+    margin-top: 25px !important;
 }
 
 
@@ -98,6 +94,7 @@ pre {
     max-width: 20px;
     max-height: 20px;
 }
+
 pre, code {
     white-space: pre; /* Preserve whitespace and blank lines */
 }
@@ -105,8 +102,7 @@ pre, code {
 p {
     color: var(--paragraphColor);
     font-family: Georgia, 'Times New Roman', Times, san-serif;
-    max-width: 700px;
-    min-width: 700px;
+    width: 100%;
     text-align: left;
     margin: 0 auto;
     font-size: 18px;
@@ -115,13 +111,19 @@ p {
 
 #mainDiv {
     background-color: var(--contentBackgroundColor);
-    max-width:max-content;
+    width: 50% !important;
     padding: 30px 45px;
-    margin: auto;
+    
     min-height: fit-content;
     border-radius: 10px;
     float: left;
     
+}
+
+.sideBox {
+    text-align: center;
+    min-height: fit-content;
+    max-width: fit-content;
 }
 
 .first-word {
@@ -134,35 +136,32 @@ p {
     padding-left: 2rem;
 }
 
-<<<<<<< HEAD
 #container {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+    margin: 0;
 
 }
 
-.sideBox {
-    text-align: center;
-    min-height: fit-content;
-    max-width: fit-content;
-}
-=======
+
 .accordion {
     width: 100%;
     display: block;
     margin: auto;
-    background-color: var(--headerGreen);
+    background-color: var(--accordionColor);
     border: none;
     border-radius: 10px;
     height: 4em;
     color: var(--paragraphColor);
     font-size: 100%;
     padding: 5px;
-    cursor: pointer;
+    cursor: pointer; 
+}
 
-    
-    
+.accordion:hover {
+    background-color: #2E2532;
 }
 
 .accordion-down-arrow {
@@ -181,10 +180,60 @@ p {
 }
 
 .panel {
-    display: none;
-    background-color: var(--headerGreen);
+    background-color: var(--accordionColor);
     border-radius: 0px 0px 10px 10px;
     padding: 10px;
+    max-height: 0; /* Initially collapsed */
+    overflow: hidden; /* Hide overflowing content */
+    transition: max-height 0.3s ease-out; /* Smooth transition */
+    display: none;
 }
 
->>>>>>> 6ccebde888c16f0c740dc510e95d2b9d5ff30ecb
+footer {
+    padding-top: 30px;
+    background-color: var(--navBarColors);
+    margin: 0;
+    text-align: center !important;
+    border-top: var(--bodyColor) solid 2px;
+}
+
+
+.bottomNavBar {
+    position: sticky;
+    bottom: 0;
+    background-color: var(--navBarColors);
+    height: 2.5em;
+    
+    border-top: 1px solid var(--bodyColor);
+    border-radius: 5px 5px 0px 0px;
+    margin: auto;
+    margin-bottom: 0;
+}
+
+.bottomNavBar button {
+    height: 100%;
+    font-size: 1em;
+    font-weight: bold;
+    width: 50%;
+    border: none;
+    background-color: transparent;
+    color: var(--paragraphColor);
+    border-top: var(--bodyColor) solid 2px
+}
+
+.bottomNavBar button:hover {
+    background-color: var(--accordionColor);
+    
+}
+
+#nextButton {
+    float: left;
+    text-align: left;
+    padding-left: 15%;   
+}
+
+#backButton {
+    float: right;
+    text-align: right;
+    padding-right: 15%;
+}

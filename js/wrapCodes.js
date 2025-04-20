@@ -50,26 +50,40 @@ function makeAccordions() {
   var i;
 
   for (i = 0; i < acc.length; i++) {
-    acc[i].addEventListener("click", function() {
-      /* Toggle between adding and removing the "active" class,
-      to highlight the button that controls the panel */
+    acc[i].addEventListener("click", function () {
+      let clickedElement = this
       this.classList.toggle("active");
 
-      /* Toggle between hiding and showing the active panel */
-
       let sibling = this.parentElement.nextElementSibling;
+      let img = this.parentElement.getElementsByClassName("accordion-down-arrow")[0];
 
-      let img = this.parentElement.getElementsByClassName("accordion-down-arrow")[0]
-
-      if (sibling.style.display === "block") {
-        sibling.style.display = "none";
-        this.style.borderRadius = "10px"
-        img.style.transform = 'translate(50%, 50%) rotate(0deg)'
+      if (sibling.style.maxHeight) {
+        // Collapse the panel
+        
+        sibling.style.maxHeight = null;
+        
+        
+        sibling.addEventListener(
+          "transitionend",
+          function () {
+            if (window.getComputedStyle(this).borderRadius == '0px 0px 10px 10px') {
+              
+              img.style.transform = "translate(50%, 50%) rotate(0deg)";
+              clickedElement.style.borderRadius = "10px";
+              console.log("Here")
+              
+            }
+            sibling.style.display = "none";
+          },
+          { once: true } // Ensures the event listener is removed after it fires
+        );
       } else {
-        sibling.style.display = "block";
-        this.style.borderRadius = "10px 10px 0px 0px"
-        img.style.transform = 'translate(50%, 50%) rotate(180deg)'
+        // Expand the panel
+        sibling.style.display = 'block'
+        sibling.style.maxHeight = sibling.scrollHeight + "px";
+        this.style.borderRadius = "10px 10px 0px 0px";
+        img.style.transform = "translate(50%, 50%) rotate(180deg)";
       }
     });
-  } 
+  }
 }
