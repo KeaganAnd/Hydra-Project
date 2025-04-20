@@ -111,12 +111,10 @@ p {
 
 #mainDiv {
     background-color: var(--contentBackgroundColor);
-    width: 50% !important;
+    width: 60%;
     padding: 30px 45px;
-    
     min-height: fit-content;
     border-radius: 10px;
-    float: left;
     
 }
 
@@ -198,6 +196,7 @@ footer {
 }
 
 
+
 .bottomNavBar {
     position: sticky;
     bottom: 0;
@@ -236,4 +235,15 @@ footer {
     float: right;
     text-align: right;
     padding-right: 15%;
+}
+
+
+@media (max-width: 768px) {
+    .sideBox {
+        display: none;
+    }
+
+    #mainDiv {
+        width: 100% !important;
+    }
 }
