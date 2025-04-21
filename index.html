@@ -15,6 +15,8 @@
 
         <script src="js/wrapCodes.js"></script>
         
+        <script src="js/articleOrderer.js"></script>
+
         <!-- Prism.js Line Numbers Plugin CSS -->
         <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet" />
 
@@ -71,11 +73,13 @@
         </div>
 
         <nav class="bottomNavBar">
-            <button id="nextButton">Next</button>
-            <button id="backButton">Back</button>
+            
+            <button onclick="location.href = '?section=intro';" id="backButton">Back</button>
+            <button onclick="location.href = '?section=intro';" id="nextButton">Next</button>
         </nav>
 
         <footer>
+            
             <a href="credits.html">Image Credits</a>
             <p>Created By The Hydra Project</p>
             <p>Keagan Anderson</p>

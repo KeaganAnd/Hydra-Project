@@ -27,4 +27,3 @@ Videos will talk about the sections in a shorter format with my commentary. Be s
 
 You're at the end! You can navigate sections below!
 
-<span class="bottomNavBar"><a href="#">Home</a> <span class="separator">|</span> <a href="?section=variables">Section 1: Variables</a>  </span>
