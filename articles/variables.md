@@ -163,7 +163,7 @@ This is giving apples a new value! Of the old value minus 3. Which leaves us wit
 
 Lua, the language you are learning is dynamically typed. Which simply means the computer determines the type of variable when the script is ran. Some languages require you to specify the variable type while you create the variable. For example to declare a variable in another popular language called C++ it looks like this
 
-```cpp
+```java
 int number = 5;
 ```
 

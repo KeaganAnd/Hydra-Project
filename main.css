@@ -194,13 +194,16 @@ footer {
     text-align: center !important;
     border-top: var(--bodyColor) solid 2px;
     position: relative;
+    box-shadow: 0 50vh 0 50vh var(--navBarColors);
 }
 
-
+img {
+    width: 100%;
+}
 
 .bottomNavBar {
     position: sticky;
-    bottom: 0;
+    bottom: 0px;
     background-color: transparent;
     height: 2.5em;
     border-radius: 5px 5px 0px 0px;

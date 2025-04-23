@@ -1,1 +1,1 @@
-[{"src": "intro.md", "order": 0, "name": "Intro"}, {"src": "variables.md", "order": 1, "name": "Variables"}, {"src": "test.md", "order": 2, "name": "Test"}]
+[{"src": "intro.md", "order": 0, "name": "Intro"}, {"src": "setup.md", "order": 1, "name": "Getting Setup"}, {"src": "variables.md", "order": 2, "name": "Variables"}, {"src": "test.md", "order": 3, "name": "Test"}]

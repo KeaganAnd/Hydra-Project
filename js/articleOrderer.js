@@ -53,3 +53,14 @@ fetch('articles/articles.json')
   .catch((error) => {
     console.error('Error:', error);
   });
+
+
+function makeLinkOpenInNewTab(){
+
+    const images = document.getElementsByTagName("img")
+    console.log(images)
+    Array.from(images).forEach((image) => {
+      image.parentElement.target = "_blank"
+      console.log(image)
+    })
+};

@@ -15,6 +15,41 @@ def listArticles():
         file.close()
         print("\n")
 
+def change_position():
+    clear_console()
+
+    listArticles()
+
+    articleOrder = None
+
+    path = input("Enter Article Path: ")
+    newPos = int(input("Enter New Position: "))
+
+    clear_console()
+
+    with open("articles/articles.json", "r") as file:
+        articleOrder = json.load(file)
+        file.close()
+
+    articleOrder = sorted(articleOrder, key=lambda d: d['order'])
+    
+    movingArticle = None
+
+    for i, article in enumerate(articleOrder):
+        if article["src"] == path:
+            movingArticle = articleOrder.pop(i)
+            movingArticle["order"] = newPos
+
+    articleOrder.insert(newPos, movingArticle)
+
+    for article in articleOrder[newPos+1:]:
+        article['order'] = article['order'] + 1
+
+    with open("articles/articles.json", "w") as file:
+        json.dump(articleOrder, file)
+        file.close()
+
+
 def append():
     clear_console()
 
@@ -104,7 +139,8 @@ while True:
     print("1: Append To End")
     print("2: Move To Spot")
     print("3: Remove")
-    print("4: Quit")
+    print("4: Change Position")
+    print("5: Quit")
 
     match input(""):
         case "1":
@@ -114,6 +150,8 @@ while True:
         case "3":
             remove()
         case "4":
+            change_position()
+        case "5":
             clear_console()
             print("Done")
             break

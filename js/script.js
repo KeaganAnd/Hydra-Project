@@ -16,6 +16,7 @@ fetch(`articles/${article}`)
     // Apply syntax highlighting after the content is added
     Prism.highlightAll();
     wrapTextElements()
+    makeLinkOpenInNewTab()
 
     
     // Dynamically add the copy button to each code block
